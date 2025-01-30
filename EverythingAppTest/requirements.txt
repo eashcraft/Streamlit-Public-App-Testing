@@ -1,0 +1,9 @@
+streamlit
+requests
+pandas
+numpy
+aiohttp
+asyncio
+openpyxl
+fuzzywuzzy
+python-Levenshtein
