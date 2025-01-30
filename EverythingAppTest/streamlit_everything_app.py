@@ -27,7 +27,7 @@ selected_page = st.selectbox("Select a Page", ["API Queries", "Model and Part Ma
 if selected_page == "API Queries":
     st.header("Query Parts by Manufacturer via Pimberly API")
     st.subheader('Specify a manufacturer prefix then press enter. Script will ping Pimberly API to pull all part data, and create a smart manual link dictionary.')
-    #st.write("Welcome to the Home page!")
+	#st.write("Welcome to the Home page!")
 
 
     # Streamlit input fields
