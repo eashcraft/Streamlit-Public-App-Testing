@@ -361,7 +361,7 @@ if selected_page == "Model and Part Matching":
 
             #    Getting customer info, in whatever format it may be
             if ".xlsx" in customer_file.name:
-                customer_df = pd.read_excel(customer_file)
+                customer_df = pd.read_excel(customer_file, engine="openpyxl")
             elif ".csv" in customer_file.name:
                 customer_df = pd.read_csv(customer_file)
             
