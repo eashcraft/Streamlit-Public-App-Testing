@@ -774,6 +774,12 @@ if selected_page == "Model and Part Matching":
                 ,right_on=['Customer_Part_Number','PT_Mfg_Name'],validate='many_to_many',sort = False)
             
             final_df.drop(['Customer_Part_Number'],axis=1,inplace=True)
+
+            #    Removes duplicate manufacturer matches (if you want to retain multiple potential manufacturer matches, then mute the following 3 lines of code)
+            #    Did this earlier, it's actually redundant so might remove the earlier intance of this code. We'll see
+            final_df['Customer_Model_Name'] = final_df['Customer_Model_Name'].apply(str)
+            final_df = final_df.sort_values(by = ['PT_Category_ID'], ascending=False)
+            final_df.drop_duplicates(subset = ['Customer_Model_Name'],keep = "first",inplace=True)
             
 
             
