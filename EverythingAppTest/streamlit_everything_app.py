@@ -460,8 +460,8 @@ if selected_page == "Model and Part Matching":
             
             #    ## API Query section (grabs data to build part & model DataFrames for matching) ###
             
-            #     If query is interrupted, Streamlit will cache data with the below so you can pick up where you left off
-            @st.cache_data
+            ###     If query is interrupted, Streamlit will cache data with the below so you can pick up where you left off (never mind, this was throwing error)
+            #@st.cache_data
             
             #     Define list to store primary IDs
             prim_id_list = []
