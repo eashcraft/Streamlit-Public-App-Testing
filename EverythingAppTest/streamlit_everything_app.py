@@ -24,7 +24,7 @@ selected_page = st.selectbox("Select a Page", ["API Queries", "Model and Part Ma
 # If user chooses this on selector, script will open options for API queries
 if selected_page == "API Queries":
     st.header("Query Parts by Manufacturer via Pimberly API")
-    st.markdown("### Specify a manufacturer prefix then press enter. Script will ping Pimberly API to pull all part data, and create a smart manual link dictionary.")
+    st.markdown("##### Specify a manufacturer prefix then press enter. Script will ping Pimberly API to pull all part data, and create a smart manual link dictionary.")
     #st.write("Welcome to the Home page!")
 
 
