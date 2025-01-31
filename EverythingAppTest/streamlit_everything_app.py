@@ -480,6 +480,8 @@ if selected_page == "Model and Part Matching":
             
             #     Letting user know that app has moved on to the model matching section
             st.write(f"Initiating Pimberly API Queries (Hold Tight, This Can Take a While)...")
+
+            start_time = datetime.datetime.now()
             
             #     Progress bar (to track how long this takes)
             progress = st.progress(0)
