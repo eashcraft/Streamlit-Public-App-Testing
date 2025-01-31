@@ -241,9 +241,7 @@ if selected_page == "API Queries":
 # If user chooses this on selector, script will open options for model/part matching
 if selected_page == "Model and Part Matching":
     st.header("Model and Part Matching")
-    st.markdown("###### This app will accept any .csv or .xlsx file.")
-    st.markdown("###### Please ensure the column with manufacturer listed is called 'Customer_Mfg_Name', and the column with models is called 'Customer_Model_Name'.")
-
+    st.markdown("###### This app will accept any .csv or .xlsx file. Please ensure the column with manufacturer listed is called 'Customer_Mfg_Name', and the column with models is called 'Customer_Model_Name'.")
 
     def all_purpose_cleaner(x):
         x = str(x).lower().strip()
@@ -352,6 +350,7 @@ if selected_page == "Model and Part Matching":
         try:
             # Reading in Pimberly manufacturer list
             pt_mfg_export_df = pd.read_csv("https://github.com/eashcraft/Streamlit-Public-App-Testing/blob/main/EverythingAppTest/pimberly_manufacturer_list.csv")
+            st.write(f"Mfg Export all good...")
             #pt_mfg_export_df = pt_mfg_export_df[pt_mfg_export_df["HIDEMANUFACTURER"] != "Y"]
             
             #    Exporting Mfg Names to a list, attaching original MFG names to scrubbed strings
