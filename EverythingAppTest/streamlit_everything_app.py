@@ -7,6 +7,7 @@ import numpy as np
 import streamlit as st
 import datetime
 from io import BytesIO
+from io import StringIO
 import re
 import aiohttp
 import asyncio
@@ -348,9 +349,12 @@ if selected_page == "Model and Part Matching":
     # Main execution block
     if st.button("Begin Model Matching"):
         try:
-            # Reading in Pimberly manufacturer list
-            pt_mfg_export_df = pd.read_csv("pimberly_manufacturer_list.csv", delimiter=",", engine="python")
-            #pt_mfg_export_df = pt_mfg_export_df[pt_mfg_export_df["HIDEMANUFACTURER"] != "Y"]
+            # Reading in raw file from Github URL (need to manually download file since I'm on Streamlit Community cloud, script can't find it in directory automatically)
+            
+            #pt_mfg_export_df = pd.read_csv("pimberly_manufacturer_list.csv", delimiter=",", engine="python")
+            github_file_url = "https://raw.githubusercontent.com/eashcraft/Streamlit-Public-App-Testing/refs/heads/main/EverythingAppTest/pimberly_manufacturer_list.csv"
+            response = requests.get(github_url)
+            pt_mfg_export_df  = pd.read_csv(StringIO(response.text)) 
             
             #    Exporting Mfg Names to a list, attaching original MFG names to scrubbed strings
             pt_mfg_list = pt_mfg_export_df["Name"].to_list()
