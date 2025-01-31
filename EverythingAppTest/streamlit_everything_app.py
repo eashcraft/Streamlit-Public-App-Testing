@@ -353,7 +353,7 @@ if selected_page == "Model and Part Matching":
             
             #pt_mfg_export_df = pd.read_csv("pimberly_manufacturer_list.csv", delimiter=",", engine="python")
             github_file_url = "https://raw.githubusercontent.com/eashcraft/Streamlit-Public-App-Testing/refs/heads/main/EverythingAppTest/pimberly_manufacturer_list.csv"
-            response = requests.get(github_url)
+            response = requests.get(github_file_url)
             pt_mfg_export_df  = pd.read_csv(StringIO(response.text)) 
             
             #    Exporting Mfg Names to a list, attaching original MFG names to scrubbed strings
