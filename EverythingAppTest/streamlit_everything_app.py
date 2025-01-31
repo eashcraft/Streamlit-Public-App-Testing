@@ -337,10 +337,10 @@ if selected_page == "Model and Part Matching":
     # File uploader widget
     customer_file = st.file_uploader("Upload Your File", type=["csv", "xlsx"])
 
-    # Check if file is loaded
-    if customer_file is not None:
+    ### Check if file is loaded (wasn't necessary to print, uploader shows file once it's loaded anyway)
+    #if customer_file is not None:
         # Display file details
-        st.write(f"Uploaded file: {customer_file.name}")
+        #st.write(f"Uploaded file: {customer_file.name}")
 
 
 
