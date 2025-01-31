@@ -479,7 +479,7 @@ if selected_page == "Model and Part Matching":
 
             
             #     Letting user know that app has moved on to the model matching section
-            st.write(f"Initiating Pimberly API Queries (hold tight, this can take a while)...")
+            st.write(f"Initiating Pimberly API Queries (Hold Tight, This Can Take a While)...")
             
             #     Progress bar (to track how long this takes)
             progress = st.progress(0)
@@ -535,11 +535,11 @@ if selected_page == "Model and Part Matching":
             master_attr_df = pd.DataFrame()
             
             #     Define the maximum number of concurrent requests. Makes sure we don't send too many requests at once
-            MAX_CONCURRENT_REQUESTS = 15
+            #MAX_CONCURRENT_REQUESTS = 15
             
 
             #     Define the semaphore for controlling concurrent requests
-            semaphore = asyncio.Semaphore(max_concurrent_requests)
+            semaphore = asyncio.Semaphore(15)
             
 
             #     Define the asynchronous function to fetch data from an API
