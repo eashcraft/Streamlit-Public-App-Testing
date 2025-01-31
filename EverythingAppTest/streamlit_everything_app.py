@@ -242,7 +242,7 @@ if selected_page == "API Queries":
 if selected_page == "Model and Part Matching":
     st.header("Model and Part Matching")
     st.markdown("###### This app will accept any .csv or .xlsx file.")
-    st.markdown("###### Please ensure the column with manufacturer listed is called "Customer_Mfg_Name", and the column with models is called 'Customer_Model_Name'.")
+    st.markdown("###### Please ensure the column with manufacturer listed is called 'Customer_Mfg_Name', and the column with models is called 'Customer_Model_Name'.")
 
 
     def all_purpose_cleaner(x):
