@@ -349,7 +349,7 @@ if selected_page == "Model and Part Matching":
     if st.button("Begin Model Matching"):
         try:
             # Reading in Pimberly manufacturer list
-            pt_mfg_export_df = pd.read_csv("https://github.com/eashcraft/Streamlit-Public-App-Testing/blob/main/EverythingAppTest/pimberly_manufacturer_list.csv")
+            pt_mfg_export_df = pd.read_csv("https://github.com/eashcraft/Streamlit-Public-App-Testing/blob/main/EverythingAppTest/pimberly_manufacturer_list.csv", sep=None, engine="python")
             st.write(f"Mfg Export all good...")
             #pt_mfg_export_df = pt_mfg_export_df[pt_mfg_export_df["HIDEMANUFACTURER"] != "Y"]
             
