@@ -779,7 +779,7 @@ if selected_page == "Model and Part Matching":
             
             
             #     Final file output
-            final_filename_chunk = customer_file.replace(".csv","").replace(".xlsx","").replace(" ","_").replace("__","_")
+            final_filename_chunk = customer_file.name.replace(".csv","").replace(".xlsx","").replace(" ","_").replace("__","_")
             #final_df.to_excel(f"{final_filename_chunk} Equipment Audit {current_date}.xlsx", index=False)
             
 
