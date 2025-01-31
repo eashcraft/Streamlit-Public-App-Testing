@@ -340,7 +340,7 @@ if selected_page == "Model and Part Matching":
     # Check if file is loaded
     if customer_file is not None:
         # Display file details
-        st.write(f"Uploaded file: {uploaded_file.name}")
+        st.write(f"Uploaded file: {customer_file.name}")
 
 
 
